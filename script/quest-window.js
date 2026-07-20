@@ -27,6 +27,7 @@ export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
         
         console.log(quests);
 
+        //sets player filter for if there are no quests (completed or not) to display a lack of quest message
         if (!game.user.isGM) {
             quests = quests.filter(quest => quest.flagData.visibility === "visible");
         }

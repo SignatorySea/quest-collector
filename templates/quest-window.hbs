@@ -40,7 +40,7 @@
                 <h3 class="quest-header">Active Quests</h3>
                 </div>
                 <div class="quest-list">
-                {{#each quests}}
+                {{#each activeQuests}}
                     <button type = "button", class="quest-link", data-note-id="{{this.id}}">
                         {{this.name}}
                     </button>
