@@ -21,7 +21,7 @@
 .quest-window {
     display: flex;
     flex-direction: column;
-    max-height: 10rem;
+    max-height: 20rem;
     overflow-y: scroll;
     scrollbar-color: var(--atlas-accent, rgb(70 70 70)) var(--atlas-bg, rgb(31 31 31));
     background: var(--atlas-bg, rgb(31 31 31));

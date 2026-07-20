@@ -29,19 +29,20 @@ export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
 
         if (!game.user.isGM) {
             quests = quests.filter(quest => quest.flagData.visibility === "visible");
-            console.log("filtered Quests:", quests);
         }
 
         //Seperates quests based on visiblility
-        const activeQuests = quests.filter(q => q.flagData?.visibility === "visible");
+        const activeQuests = quests.filter(q => q.flagData?.visibility === "visible" && !q.flagData?.categories?.includes("completed-quest"));
         const inactiveQuests = quests.filter(q => q.flagData?.visibility === "hidden" || q.flagData?.visibility === "secret");
 
+        const completedQuests = quests.filter(q => q.flagData?.visibility === "visible" && q.flagData?.categories?.includes("completed-quest"));
         
 
         return {
             quests,
             activeQuests,
             inactiveQuests,
+            completedQuests,
             isGM: game.user.isGM
         };
     }
