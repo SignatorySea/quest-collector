@@ -19,12 +19,18 @@
   "esmodules": [
     "script/quest-collector.js"
   ],
+  "styles":[
+    "styles/questWindow.css"
+  ],
   "relationships": {
     "requires": [
       {
         "id": "calendaria",
-        "type": "module",
-        "compatibility": {}
+        "type": "module"
+      },
+      {
+        "id": "3ds-atlas",
+        "type": "module"
       }
     ]
   },

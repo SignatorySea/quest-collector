@@ -1,15 +1,23 @@
+import { MODULE } from "./constants.js";
 import { QuestWindow } from "./quest-window.js";
 import  { addPresets } from "./addpresets.js";
 
 let questWindow;
 
-Hooks.once("ready", () =>{
-    globalThis.questCollector ={
-      api:{
+Hooks.once("init", async () =>{
+  const QUESTCOLLECTAPI = game.modules.get(MODULE.ID);
+    globalThis.QUESTCOLLECTAPI ={
         openQuestWindow
-      }
     };
+
+    ATLAS.register(MODULE.ID, { 
+      title: MODULE.NAME, 
+      github: 'SignatorySea/quest-collector', 
+      theme: { scope: '.quest-collector', default: 'questCollector' } 
+    });
 });
+
+
 
 Hooks.once("calendaria.ready", async () => {
   addPresets();
@@ -41,13 +49,3 @@ function openQuestWindow() {
     questWindow.render({force: true});
   }
 }
-
-
-/*
-Function working order
-
-  Make Preset if preset of "active" and "inactive" dont exist
-  create quest window
-  filter quests into 2 groups for displaying by the preset of "active"/"inactive" for GM users only
-  maybe filter into a 3rd category based on visibility?
-*/

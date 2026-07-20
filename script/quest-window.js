@@ -3,6 +3,7 @@ const {ApplicationV2, HandlebarsApplicationMixin} = foundry.applications.api;
 export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
     static DEFAULT_OPTIONS = {
         id: "quest-window",
+        classes:['quest-collector'],
         tag: "section",
     
         window: {
@@ -10,14 +11,14 @@ export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
             icon: "fa-solid fa-scroll",
         },
         position: {
-            width: 500,
-            height: 400
-        },
+            width: 'auto',
+            height: 'auto'
+        }
     };
 
     static PARTS = {
         content: {
-            template: "modules/quest-collector/templates/quest-window.hbs"
+            template: "modules/questCollector/templates/quest-window.hbs"
         }
     };
 
