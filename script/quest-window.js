@@ -32,9 +32,9 @@ export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
             console.log("filtered Quests:", quests);
         }
 
-        //Seperates quests based on presets
-        const activeQuests = quests.filter(q => q.flagData?.categories.includes("active"));
-        const inactiveQuests = quests.filter(q => !q.flagData?.categories.includes("active"));
+        //Seperates quests based on visiblility
+        const activeQuests = quests.filter(q => q.flagData?.visibility === "visible");
+        const inactiveQuests = quests.filter(q => q.flagData?.visibility === "hidden" || q.flagData?.visibility === "secret");
 
         
 

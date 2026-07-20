@@ -1,6 +1,6 @@
 import { MODULE } from "./constants.js";
 import { QuestWindow } from "./quest-window.js";
-import  { addPresets } from "./addpresets.js";
+
 
 let questWindow;
 
@@ -20,7 +20,6 @@ Hooks.once("init", async () =>{
 
 
 Hooks.once("calendaria.ready", async () => {
-  addPresets();
   questWindow = new QuestWindow();
 
 });

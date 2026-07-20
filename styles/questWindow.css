@@ -1,14 +1,14 @@
-.application .window-header{
+#quest-window .window-header{
     color: var(--atlas-title-text, rgb(224 224 224));
     background: var(--atlas-bg);
     box-shadow: var(--atlas-divider, rgb(70,70,70));
 }
 
-.application .window-header .header-control {
+#quest-window .window-header .header-control {
     color: var(--atlas-title-text, rgb(224 224 224));
 }
 
-.application .window-header .window-title {
+#quest-window .window-header .window-title {
     color: var(--atlas-title-text, rgb(224 224 224));
 }
 
@@ -21,8 +21,9 @@
 .quest-window {
     display: flex;
     flex-direction: column;
-    max-height: 50%;
+    max-height: 10rem;
     overflow-y: scroll;
+    scrollbar-color: var(--atlas-accent, rgb(70 70 70)) var(--atlas-bg, rgb(31 31 31));
     background: var(--atlas-bg, rgb(31 31 31));
 }
 
@@ -41,6 +42,9 @@
     color: var(--atlas-button-text, rgb(224 224 224));
 }
 
+.quest-link:hover{
+    background: var(--atlas-button-hover, rgb(118 124 202));
+}
 .quest-header{
     text-decoration: underline;
     color: var(--atlas-title-text, rgb(224 224 224));
