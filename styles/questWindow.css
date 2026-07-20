@@ -1,6 +1,15 @@
-.applicaiton.quest-window .window.header{
-    background: var(--atlas-bg, rgb(224 224 224));
+.application .window-header{
+    color: var(--atlas-title-text, rgb(224 224 224));
+    background: var(--atlas-bg);
     box-shadow: var(--atlas-divider, rgb(70,70,70));
+}
+
+.application .window-header .header-control {
+    color: var(--atlas-title-text, rgb(224 224 224));
+}
+
+.application .window-header .window-title {
+    color: var(--atlas-title-text, rgb(224 224 224));
 }
 
 .quest-collector {
@@ -34,6 +43,7 @@
 
 .quest-header{
     text-decoration: underline;
+    color: var(--atlas-title-text, rgb(224 224 224));
     text-decoration-color: var(--atlas-divider,rgb(102, 101, 101));
     padding-left: 0.5rem;
     padding-top: 0.5rem;
