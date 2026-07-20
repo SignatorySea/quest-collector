@@ -1,0 +1,32 @@
+{
+  "id": "questCollector",
+  "title": "Quest Collector",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Sig",
+      "discord": "SignatorySea",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "esmodules": [
+    "script/quest-collector.js"
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "calendaria",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "description": ""
+}

@@ -1,0 +1,40 @@
+<div class="quest-window" style="background: {{system.color}}">
+    <h2>Quest Board</h2>
+
+    {{#if quests.length}}
+            {{#if isGM}}
+                <div class="note-header-text">
+                <h3 class="quest-header">Active Quests</h3>
+                </div>
+                <div class="quest-list">
+                {{#each activeQuests}}
+                    <button class="quest-link " data-note-id="{{this.id}}">
+                        {{this.name}}
+                    </button>
+                {{/each}}
+                </div>
+
+                <h3 class="quest-header">Inactive Quests</h3>
+                <div class="quest-list">
+                {{#each inactiveQuests}}
+                    <button class="quest-link" data-note-id="{{this.id}}">
+                        {{this.name}}
+                    </button>
+                {{/each}}
+                </div>
+
+            {{else}}
+                {{#each quests}}
+                    <button type = "button", class="quest-link", data-note-id="{{this.id}}">
+                        {{this.name}}
+                    </button>
+                {{/each}}
+
+            {{/if}}
+
+    {{else}}
+
+        <p>No quests available.</p>
+
+    {{/if}}
+</div>
