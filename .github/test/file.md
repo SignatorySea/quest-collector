@@ -1,0 +1,1 @@
+This is an ignorable file that is made just to fix the weird folder structure my vs code was implementing.
