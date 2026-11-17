@@ -8,9 +8,10 @@
                 
                 <div class="quest-list">
                 {{#each activeQuests}}
-                    <button class="quest-link " data-note-id="{{this.id}}">
-                        {{this.name}}
-                    </button>
+                    <div class="quest-link" data-note-id="{{this.id}}" role="button">
+                        <p class="quest-name">{{this.name}}</p>
+                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                    </div>
                 {{/each}}
                 </div>
                 <div class="note-header-text">
@@ -18,9 +19,10 @@
                 </div>
                 <div class="quest-list">
                 {{#each inactiveQuests}}
-                    <button class="quest-link" data-note-id="{{this.id}}">
-                        {{this.name}}
-                    </button>
+                    <div class="quest-link" data-note-id="{{this.id}}" role="button">
+                        <p class="quest-name">{{this.name}}</p>
+                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                    </div>
                 {{/each}}
                 </div>
                 <div class="note-header-text">
@@ -28,9 +30,10 @@
                 </div>
                 <div class="quest-list">
                 {{#each completedQuests}}
-                    <button class="quest-link" data-note-id="{{this.id}}">
-                        {{this.name}}
-                    </button>
+                    <div class="quest-link" data-note-id="{{this.id}}" role="button">
+                        <p class="quest-name">{{this.name}}</p>
+                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                    </div>
                 {{/each}}
                 </div>
             </div>
@@ -41,9 +44,10 @@
                 </div>
                 <div class="quest-list">
                 {{#each activeQuests}}
-                    <button type = "button", class="quest-link", data-note-id="{{this.id}}">
-                        {{this.name}}
-                    </button>
+                    <div class="quest-link" data-note-id="{{this.id}}" role="button">
+                        <p class="quest-name">{{this.name}}</p>
+                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                    </div>
                 {{/each}}
                 </div>
                 <div class="note-header-text">
@@ -51,9 +55,10 @@
                 </div>
                 <div class="quest-list">
                 {{#each completedQuests}}
-                    <button class="quest-link" data-note-id="{{this.id}}">
-                        {{this.name}}
-                    </button>
+                    <div class="quest-link" data-note-id="{{this.id}}" role="button">
+                        <p class="quest-name">{{this.name}}</p>
+                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                    </div>
                 {{/each}}
                 </div>
             </div>

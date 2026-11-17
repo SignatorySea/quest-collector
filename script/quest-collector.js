@@ -23,6 +23,18 @@ Hooks.once("calendaria.ready", async () => {
   addPresets();
   questWindow = new QuestWindow();
 
+  CALENDARIA.api.registerWidget('questCollector', {
+    id: 'quest-button',
+    type: 'button',
+    insertAt: 'hud.buttons.right',
+    icon: 'fa-solid fa-scroll',
+    label: 'Quest Board',
+    tooltip: 'Open Quest Board',
+    onClick: () => {
+      openQuestWindow();
+    }
+  })
+
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {

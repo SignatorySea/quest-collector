@@ -19,10 +19,11 @@
 
 
 .quest-window {
-    display: flex;
-    flex-direction: column;
-    max-height: 20rem;
-    overflow-y: scroll;
+
+    height: 20rem;
+    width: 20rem;
+    overflow-x: hidden;
+    overflow-y: auto;
     scrollbar-color: var(--atlas-accent, rgb(70 70 70)) var(--atlas-bg, rgb(31 31 31));
     background: var(--atlas-bg, rgb(31 31 31));
 }
@@ -35,11 +36,38 @@
     padding-left: 1rem;
 }
 
+.quest-list > *+* {
+    margin-top: 1rem;
+}
+
 .quest-link {
+    max-width: 18rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
     border-radius: 2rem;
+    corner-shape: squircle;
     border: 2px solid var(--atlas-button-border, rgb(118 124 202));
     background-color: var(--atlas-button-bg, rgb(60 60 60));
     color: var(--atlas-button-text, rgb(224 224 224));
+    padding: 0.5rem;
+
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+
+.quest-link p {
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.quest-name {
+    font-size: 16px;
+    text-decoration: underline;
 }
 
 .quest-link:hover{

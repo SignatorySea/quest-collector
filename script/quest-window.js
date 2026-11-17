@@ -51,8 +51,8 @@ export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
     async _onRender(content, options){
         await super._onRender(content, options);
 
-        this.element.querySelectorAll(".quest-link").forEach(button => {
-            button.addEventListener("click", this._onQuestClick.bind(this));
+        this.element.querySelectorAll(".quest-link").forEach(div => {
+            div.addEventListener("click", this._onQuestClick.bind(this));
         });
     }
 
