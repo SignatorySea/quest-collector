@@ -1,7 +1,7 @@
 #quest-window .window-header{
     color: var(--atlas-title-text, rgb(224 224 224));
-    background: var(--atlas-bg);
-    box-shadow: var(--atlas-divider, rgb(70,70,70));
+    background: var(--atlas-bg, rgb(71,52,14));
+    box-shadow: var(--atlas-divider, rgb(31, 35, 11));
 }
 
 #quest-window .window-header .header-control {
@@ -12,26 +12,19 @@
     color: var(--atlas-title-text, rgb(224 224 224));
 }
 
-.quest-collector {
-    background: var(--atlas-bg-lighter, rgb(31 31 31));
-    color: var(--atlas-text, rgb(224 224 224));
-}
-
-
 .quest-window {
 
-    height: 20rem;
+    height: 30rem;
     width: 20rem;
     overflow-x: hidden;
     overflow-y: auto;
-    scrollbar-color: var(--atlas-accent, rgb(70 70 70)) var(--atlas-bg, rgb(31 31 31));
-    background: var(--atlas-bg, rgb(31 31 31));
+    scrollbar-color: var(--atlas-accent, rgb(234, 216, 193)) var(--atlas-bg, rgb(89, 72, 38));
+    background: var(--atlas-bg-lighter, rgb(89 72 38));
 }
 
 .quest-list{
     flex: 1;
     min-height: 0;
-    background: var(--atlas-bg, rgb(31 31 31));
     margin-bottom: 2rem;
     padding-left: 1rem;
 }
@@ -47,8 +40,8 @@
     flex-direction: column;
     border-radius: 2rem;
     corner-shape: squircle;
-    border: 2px solid var(--atlas-button-border, rgb(118 124 202));
-    background-color: var(--atlas-button-bg, rgb(60 60 60));
+    border: 2px solid var(--atlas-button-border, rgb(221 218 211));
+    background-color: var(--atlas-button-bg, rgb(122 108 81));
     color: var(--atlas-button-text, rgb(224 224 224));
     padding: 0.5rem;
 
@@ -79,4 +72,5 @@
     text-decoration-color: var(--atlas-divider,rgb(102, 101, 101));
     padding-left: 0.5rem;
     padding-top: 0.5rem;
+    text-align: center;
 }

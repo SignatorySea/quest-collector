@@ -10,7 +10,7 @@
                 {{#each activeQuests}}
                     <div class="quest-link" data-note-id="{{this.id}}" role="button">
                         <p class="quest-name">{{this.name}}</p>
-                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                        <p>Start Date: {{this.startDate}}</p>
                     </div>
                 {{/each}}
                 </div>
@@ -21,7 +21,7 @@
                 {{#each inactiveQuests}}
                     <div class="quest-link" data-note-id="{{this.id}}" role="button">
                         <p class="quest-name">{{this.name}}</p>
-                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                        <p>Start Date: {{this.startDate}}</p>
                     </div>
                 {{/each}}
                 </div>
@@ -32,7 +32,7 @@
                 {{#each completedQuests}}
                     <div class="quest-link" data-note-id="{{this.id}}" role="button">
                         <p class="quest-name">{{this.name}}</p>
-                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                        <p>Start Date: {{this.startDate}}</p>
                     </div>
                 {{/each}}
                 </div>
@@ -46,7 +46,7 @@
                 {{#each activeQuests}}
                     <div class="quest-link" data-note-id="{{this.id}}" role="button">
                         <p class="quest-name">{{this.name}}</p>
-                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                        <p>Start Date: {{this.startDate}}</p>
                     </div>
                 {{/each}}
                 </div>
@@ -57,7 +57,7 @@
                 {{#each completedQuests}}
                     <div class="quest-link" data-note-id="{{this.id}}" role="button">
                         <p class="quest-name">{{this.name}}</p>
-                        <p>Start Date: {{this.flagData.startDate.day}} {{this.flagData.startDate.month}}, {{this.flagData.startDate.year}}</p>
+                        <p>Start Date: {{this.startDate}}</p>
                     </div>
                 {{/each}}
                 </div>

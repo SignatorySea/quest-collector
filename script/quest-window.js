@@ -32,15 +32,27 @@ export class QuestWindow extends HandlebarsApplicationMixin(ApplicationV2) {
             quests = quests.filter(quest => quest.flagData.visibility === "visible");
         }
 
-        //Seperates quests based on visiblility
-        const activeQuests = quests.filter(q => q.flagData?.visibility === "visible" && !q.flagData?.categories?.includes("completed-quest"));
-        const inactiveQuests = quests.filter(q => q.flagData?.visibility === "hidden" || q.flagData?.visibility === "secret");
+        const formattedQuests = await Promise.all(
+            quests.map(async quest => ({
+                id: quest.id,
+                name: quest.name,
+                startDate: await CALENDARIA.api.formatDate( quest.flagData.startDate, 'DD MMMM, YYYY'),
+                visibility: quest.flagData?.visibility,
+                isCompleted: quest.flagData?.categories?.includes("completed-quest")
+            }))
+        );
 
-        const completedQuests = quests.filter(q => q.flagData?.visibility === "visible" && q.flagData?.categories?.includes("completed-quest"));
+        console.error (formattedQuests);
+
+        //Seperates quests based on visiblility
+        const activeQuests = formattedQuests.filter(q => q.visibility === "visible" && !q.isCompleted);
+        const inactiveQuests = formattedQuests.filter(q => q.visibility === "hidden" || q.visibility === "secret");
+
+        const completedQuests = formattedQuests.filter(q => q.visibility === "visible" && q.isCompleted);
         
 
         return {
-            quests,
+            quests : formattedQuests,
             activeQuests,
             inactiveQuests,
             completedQuests,
