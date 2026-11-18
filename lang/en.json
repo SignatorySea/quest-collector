@@ -1,0 +1,7 @@
+{
+    "activeQuest": "Active Quests",
+    "inactiveQuest": "Inactive Quests",
+    "completedQuest": "Completed Quests",
+    "noQuests": "No quests available.",
+    "startDate": "Start Date"
+}

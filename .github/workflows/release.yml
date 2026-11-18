@@ -83,7 +83,7 @@ jobs:
           cp module.json package/${{ env.MODULE_ID }}/
           cp -r scripts package/${{ env.MODULE_ID }}/
           cp -r styles package/${{ env.MODULE_ID }}/
-          cp -r languages package/${{ env.MODULE_ID}}/
+          cp -r lang package/${{ env.MODULE_ID}}/
 
           cd package
           zip -r "../${{ env.ZIP_NAME }}" "${{ env.MODULE_ID }}"
