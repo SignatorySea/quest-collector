@@ -84,7 +84,7 @@ jobs:
           cp -r scripts package/${{ env.MODULE_ID }}/
           cp -r styles package/${{ env.MODULE_ID }}/
           cp -r lang package/${{ env.MODULE_ID}}/
-          cp -r tempaltes package/${{env.MODULE_ID}}/
+          cp -r templates package/${{env.MODULE_ID}}/
 
           cd package
           zip -r "../${{ env.ZIP_NAME }}" "${{ env.MODULE_ID }}"
