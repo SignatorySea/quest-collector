@@ -8,3 +8,5 @@ GM's you can see all quests seperated by visibility, all quest notes marked as V
 Players only see the active quests! Keeping the secret quest notes secret!
 
 Use the included "Completed Quests" note Preset to recatagorze visible completed quests so they dont clutter the active bar.
+
+<img src=".github/images/questboardWindow.png" alt="Window for Quest Board">
